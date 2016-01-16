@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>模拟web占位符</title>
+<link rel="stylesheet" href="">
+<style>
+.hd{height:100px;border:1px solid #999;}
+.aside{width:200px;height:200px;border:1px solid #999;padding:10px;float:left;}
+.fixed .aside{position:fixed;left:8px;top:0;}
+.fixed .article{margin-left:212px;}
+.article{height:1200px;width:400px;border:1px solid #999;float:right;}
+.textOutside{margin:10px 0;border:1px solid #999;background-color:white;padding:5px;position:relative;}
+.focus{border:1px solid red;}
+.textOutside label{position:absolute;left:5px;top:5px;}
+.textInside{width:100%;background-color:transparent;border:none;font-size:14px;height:20px;}
+/* 人物动画 */
+.peo{width:112px;height:112px;background:url(image/img.png) no-repeat;
+-webkit-animation:people 3s;
+    -webkit-animation-duration: 800ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: step-start;
+}
+
+@-webkit-keyframes people /* Safari 和 Chrome */
+{
+	0% {background-position:0 0;}
+	10% {background-position:-112px 0;}
+	20% {background-position:-224px 0;}
+	30% {background-position:-252px 0;}
+	40% {background-position:-472px 0;}
+	50% {background-position:-596px 0;}
+	60% {background-position:-11px -112px;}
+	70% {background-position:-123px -112px;}
+	80% {background-position:-236px -112px;}
+	90% {background-position:-362px -112px;}
+	100% {background-position:-490px -112px;}
+}
+
+input[type="checkbox"]{border:1px solid green;width:18px;height:18px;position:relative; -webkit-appearance:none;}
+input[type="checkbox"]:checked:before{	content:"\20";
+	position:absolute;
+	top:3px;
+	left:3px;
+	width:7px;
+	height:4px;
+	-webkit-transform: rotate(-50deg);
+	transform: rotate(-50deg);
+	border-left:2px solid white;
+	border-bottom:2px solid white;}
+
+.tab{overflow:hidden;}	
+.tab a{display:block;width:100px;height:30px;line-height:30px;text-align:center;border:1px solid #999;}
+.inner .item{display:none;height:100px;background-color:#09f;}
+
+ul,li{margin:0;padding:0;}
+.adBox{width:200px;height:30px;overflow:hidden;border:1px solid #999;background:white;}
+.adBox ul{height:30px;}
+.adBox li{line-height:30px;padding:0 10px;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+</style>
+</head>
+<body>
+	<header class="hd">
+	<img src="http://www.mamalianmeng.com.cn/Public/App/img/logo1.png" width="80" height="80" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAAA3NCSVQICAjb4U/gAAAAG1BMVEX////MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMxzGXsAAAAACXRSTlMAESIzRFVmd4iHXqUKAAAACXBIWXMAAAsSAAALEgHS3X78AAAAH3RFWHRTb2Z0d2FyZQBNYWNyb21lZGlhIEZpcmV3b3JrcyA4tWjSeAAAABZ0RVh0Q3JlYXRpb24gVGltZQAwOS8wMy8xNIeG+AUAAAFjSURBVEiJ7ZRLS8NAFIUnSU1dBhHpso6PdVbVZcSFWQoqZtmChC5blJilaJK5P9veR9MmY7JQBIVeQid0Ps7MydwzSu3qh3V4jU93uTlkAItuYAhYZTcwIgC6gX2aN92AT0DRs0kCejapYgTGPYC/WeH0bvUzAYODcwPVFf89B7ilFw9gqS5QcMnCJhSJj9pQucemAh5l4jGsgSrhz7K43HbvqBpYV5nz2Nw8AtXYIZEi8JCJLGCqFC0f8iEQ4OgtADVlcQTJXoKuBDDiu2DXKIhjtXEhwLviQ5iKUhNImoBvAfF/AA60pjPQWgdfAq2ygUmazvAI0jSN/qzN7wNDSZAAngW4wL0VM4iN8sbC69vh7CkQAFtvJMmJoX19xKTt5tzdA7AATJW5nxvK1kNuA3IrzSRlrxYwkFxKPo8sAPseDXks5ILJWgDG8gVdreaflTrPohagnBOOo6uP21O7+v36BKr+CrbQ0lnZAAAAAElFTkSuQmCC'" />
+	<label style="display:inline-block;padding:10px;background-color:red;"><input type="checkbox" name="" id="check" /></label>
+	</header>
+	<div style="overflow:hidden;padding:10px 0;" id="J_content">
+		<aside class="aside" id="J_aside">
+			<div class="textOutside">
+				<input type="text" name="" class="textInside" />
+				<label>用户名：</label>
+			</div>
+			<div class="textOutside">
+				<input type="text" name="" class="textInside" />
+				<label>密  码：</label>
+			</div>
+			<div class="adBox">
+				<ul>
+					<li>1广告内容广告内容广告内容广告内容广告内容</li>
+					<li>2广告内容广告内容广告内容广告内容广告内容</li>
+					<li>3广告内容广告内容广告内容广告内容广告内容</li>
+				</ul>
+			</div>
+		</aside>
+		<article class="article">
+			<div class="peo" style="display:none;">
+			
+			</div>
+			<nav class="tab">
+				<a href="javascript:;">1</a>
+				<a href="javascript:;">2</a>
+				<a href="javascript:;">3</a>
+			</nav>
+			<div class="inner">
+				<div class="item" style="display:block;">1</div>
+				<div class="item">2</div>
+				<div class="item">3</div>
+			</div>
+		</article>
+	</div>
+	<div id="result"></div>
+	<!--script-->
+	<script src="script/jquery-1.11.0.min.js" ></script>
+	<script>
+		//默认文本框点位符
+		$('.textInside').focus(function(event) {
+			$(this).next('label').hide().parent('.textOutside').addClass('focus');
+		});
+		$('.textInside').blur(function(event) {
+			if( $(this).val() == '' ){
+				$(this).next('label').show().parent('.textOutside').removeClass('focus');
+			}else{
+				$(this).next('label').hide().parent('.textOutside').removeClass('focus');;
+			}
+		});
+		//左则超出临界点时，固定，否则反之
+		$(window).scroll( function(){
+			if( $(this).scrollTop() >= 120 ){
+				$('#J_content').addClass('fixed');
+			}else{
+				$('#J_content').removeClass('fixed');
+			}
+		})
+		//公告上滑效果
+		var _autoUp;
+		function AutoScroll(obj){ 
+			$(obj).find("ul:first").animate({ 
+			marginTop:"-30px" 
+			},500,function(){ 
+				$(this).css({marginTop:"0px"}).find("li:first").appendTo(this); 
+			}); 
+		} 
+		function autoUp(){
+			_autoUp = setInterval('AutoScroll(".adBox")',3000);
+		}
+		autoUp();
+		$('.adBox li').mouseover(function(){
+			clearInterval(_autoUp);
+		})
+		$('.adBox li').mouseout(function(){
+			autoUp();
+		})
+
+
+ 
+
+    $.getJSON('demo.json', function(data){
+            $.each(data,function(i,item){  
+                var content=item.name+","+item.email+","+item.gender+ ","+item.hobby[0]+","+item.hobby[1]+"</br>"; 
+                $("#result").append(content);  
+            })
+
+            for(var i = 0 ; i < data.length ; i ++ ){
+            	var content=data[i].name+","+data[i].email+","+data[i].gender+ ","+data[i].hobby[0]+","+data[i].hobby[1]+"</br>";
+            	$("#result").append(content);  
+        	}
+    })
+
+	</script>
+
+	<srcipt src="http://192.168.20.9:8088/target/target-script-min.js#anonymous"></srcipt>
+</body>
+</html>

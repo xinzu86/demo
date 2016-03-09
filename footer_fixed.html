@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>fooer固定，内容超出跟随（CSS实现）</title>
+	<link rel="stylesheet" href="">
+	<style>
+	html,body,p{margin:0;padding:0;}
+	html,body{height:100%;}
+	p{line-height:30px;}
+	.content{min-height:100%;}
+	.main{padding-bottom:100px;}
+	.ft{height:100px;line-height:100px;text-align:center;margin-top:-100px;background-color:#f3f3f3;font-size:40px;}
+	</style> 
+</head>
+<body>
+	<div class="content">
+		<div class="main">
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p><button type="button" name="" id="J_btn">显示更多</button></p>
+			<div id="J_more" style="display:none;">
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			<p>fooer固定，内容超出跟随（CSS实现）</p>
+			</div>
+		</div>
+	</div>
+	<footer class="ft">footer</footer>
+	<!--测试代码-->
+	<script>
+	var _more = document.getElementById('J_more'),
+		_btn = document.getElementById('J_btn');
+		_btn.onclick = function(){
+			_switch();
+		}
+		function _switch(){
+			if ( _more.style.display == 'none'){
+				_btn.innerHTML = '隐藏部分';
+				_more.style.display = 'block';
+			}else{
+				_btn.innerHTML = '显示更多';
+				_more.style.display = 'none';
+			}
+		}	
+	</script>
+</body>
+</html>

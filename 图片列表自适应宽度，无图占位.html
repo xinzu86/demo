@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<title>图片列表宽适应，无图占位</title>
+	<link rel="stylesheet" href="">
+	<style>
+	html,body,p,ul,li{margin:0;padding:0;}
+	html,body{height:100%;}
+	li{list-style:none;}
+	.list{padding:10px;
+   		-webkit-flex-wrap: wrap;
+	}
+	.list li{border:1px solid #999;width:50%;margin-top:-1px;position:relative;overflow:hidden;box-sizing:border-box;}
+	.list li:nth-child(2n){margin-left:-1px;}
+	.list li:before{content:'';display:block;margin-top:100%;}
+	.list li img{position:absolute;top:0;width:100%;}
+	img{vertical-align:top;}
+	p{line-height:30px;}
+	/* 弹性伸缩布局 */
+	.flex{display:-webkit-box;display:-webkit-flex;display:flex;}
+	.flex-1{-webkit-box-flex:1;-webkit-flex:1;flex:1;}
+	.flex-2 {
+	    -webkit-box-flex:2; /* android 2.1-3.0, ios 3.2-4.3 */
+	    -webkit-flex:2; /* Chrome 21+ */
+	    -ms-flex:2; /* WP IE 10 */
+	    flex:2; /* android 4.4 */
+	}
+	/* 与flex一起让元素水平居中 */
+	.column-center{-webkit-box-align: center;box-align: center;-webkit-align-items: center;align-items: center;}
+	/* 与flex一起让元素水平垂直居中 */
+	.item-center{-webkit-box-pack: center;box-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;box-align: center;-webkit-align-items: center;align-items: center;
+	}
+	</style> 
+</head>
+<body>
+	<ul class="list flex">
+		<li class="">
+			<img src="http://image.huigoumai.com/2015102822d698427cc4fd9063120cc788df76c1?imageView2/2/w/750" width="100%" alt />
+		</li>
+		<li class="">
+			<img src="http://image.huigoumai.com/2015102822d698427cc4fd9063120cc788df76c1?imageView2/2/w/750" width="100%" alt />
+		</li>
+		<li class="">
+			<img src="http://image.huigoumai.com/2015102822d698427cc4fd9063120cc788df76c1?imageView2/2/w/750" width="100%" alt />
+		</li>
+		<li class="">
+			<img src="http://image.huigoumai.com/2015102822d698427cc4fd9063120cc788df76c1?imageView2/2/w/750" width="100%" alt />
+		</li>
+	</ul>
+</body>
+</html>
